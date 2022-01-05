@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
 
       body: ListView(
         controller: _scrollController,
-        padding: const EdgeInsets.all(15),
+        // padding: const EdgeInsets.all(15),
         children: [
            const Text('Recents', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, ),),
         
@@ -89,14 +89,23 @@ class HomePage extends StatelessWidget {
       style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 18),),
     ),
     
-    itemBuilder: (context, dynamic element) => const ListTile(
-             leading: CircleAvatar(
-             radius: 22,
-             backgroundImage: AssetImage('assets/adom.jpg'),),
-             title: Text('Micheal Nyarko', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
-             subtitle: Text('+233 56 342 8965'),
-             trailing: IconButton(onPressed: null, icon: Icon(Icons.more_horiz)),
-           ),
+    itemBuilder: (context, dynamic element) => Column(
+      children: const [
+         ListTile(
+                 leading: CircleAvatar(
+                 radius: 22,
+                 backgroundImage: AssetImage('assets/adom.jpg'),),
+                 title: Text('Micheal Nyarko', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
+                 subtitle: Text('+233 56 342 8965'),
+                 trailing: IconButton(onPressed: null, icon: Icon(Icons.more_horiz)),
+               ),
+
+               Divider(
+             indent: 25,
+             thickness: 1,
+          )
+      ],
+    ),
 
     itemComparator: (item1, item2) => 
     item1['name'].compareTo(item2['name']), // optional
