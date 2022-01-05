@@ -67,8 +67,12 @@ class HomePage extends StatelessWidget {
              thickness: 1,
           );},
           itemCount: 3),
-        ],),
 
+         const Text('Contacts', 
+         style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.black,),)
+        cuppertino
+        ],
+      ),
     );
   }
 }
