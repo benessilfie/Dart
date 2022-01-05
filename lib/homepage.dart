@@ -69,8 +69,8 @@ class HomePage extends StatelessWidget {
           itemCount: 3),
 
          const Text('Contacts', 
-         style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.black,),)
-        cuppertino
+         style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.black,),),
+
         ],
       ),
     );
