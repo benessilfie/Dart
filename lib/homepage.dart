@@ -71,14 +71,15 @@ class HomePage extends StatelessWidget {
 
          const Text('Contacts', 
          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.black,),),
+         
          GroupedListView<dynamic, String>(
+           shrinkWrap: true,
     elements: const [
       {'name':'Abena', 'phone_number':'+233 56 958 7251'},
       {'name':'Abena', 'phone_number':'+233 56 958 7251'},
-      {'name':'Abena', 'phone_number':'+233 56 958 7251'}
-      ],
-    groupBy: (element) => element['name'],
-    groupSeparatorBuilder: (String groupByValue) => Text(groupByValue),
+      {'name':'Abena', 'phone_number':'+233 56 958 7251'}],
+    groupBy: (element) => element['name'].toString().substring(0,1),
+    groupSeparatorBuilder: (String groupByValue) => Text(groupByValue.substring(0,1)),
     itemBuilder: (context, dynamic element) => Text(element['name']),
     itemComparator: (item1, item2) => item1['name'].compareTo(item2['name']), // optional
     useStickyGroupSeparators: true, // optional
