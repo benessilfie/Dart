@@ -76,10 +76,7 @@ class HomePage extends StatelessWidget {
          GroupedListView<dynamic, String>(
            shrinkWrap: true,
 
-    elements: const [
-      {'name':'Abena', 'phone_number':'+233 56 958 7251'},
-      {'name':'Abena', 'phone_number':'+233 56 958 7251'},
-      {'name':'Abena', 'phone_number':'+233 56 958 7251'}],
+    elements: ,
 
     groupBy: (element) => element['name'].toString().substring(0,1),
     groupSeparatorBuilder: (String groupByValue) => 
