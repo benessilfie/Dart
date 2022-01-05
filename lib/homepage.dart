@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  HomePage({Key? key}) : super(key: key);
+  final ScrollController _scrollController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -41,20 +42,32 @@ class HomePage extends StatelessWidget {
       ),
 
       body: ListView(
+        controller: _scrollController,
         padding: const EdgeInsets.all(15),
-        children: const [
-           Text('Recents', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, ),),
-           ListTile(
+        children: [
+           const Text('Recents', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, ),),
+        
+        ListView.separated(
+          controller: _scrollController,
+          shrinkWrap: true,
+          itemBuilder: (context, index){
+
+            return const ListTile(
              leading: CircleAvatar(
                radius: 22,
-               backgroundImage: ,
-               ),
+               backgroundImage: AssetImage('assets/adom.jpg'),),
              title: Text('Micheal Nyarko', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
              subtitle: Text('+233 56 342 8965'),
              trailing: IconButton(onPressed: null, icon: Icon(Icons.more_horiz)),
-           )
-        ],
-      ),
+           );}, 
+
+          separatorBuilder: (context, index){
+            return const Divider(
+             indent: 25,
+             thickness: 1,
+          );},
+          itemCount: 3),
+        ],),
 
     );
   }
