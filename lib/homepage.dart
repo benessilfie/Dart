@@ -39,6 +39,23 @@ class HomePage extends StatelessWidget {
           ),
         ),),
       ),
+
+      body: ListView(
+        padding: const EdgeInsets.all(15),
+        children: const [
+           Text('Recents', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, ),),
+           ListTile(
+             leading: CircleAvatar(
+               radius: 22,
+               backgroundImage: ,
+               ),
+             title: Text('Micheal Nyarko', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
+             subtitle: Text('+233 56 342 8965'),
+             trailing: IconButton(onPressed: null, icon: Icon(Icons.more_horiz)),
+           )
+        ],
+      ),
+
     );
   }
 }
