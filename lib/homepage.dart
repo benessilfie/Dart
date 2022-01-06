@@ -41,6 +41,41 @@ class HomePage extends StatelessWidget {
 		"email": "hendrerit.consectetuer.cursus@protonmail.net",
 		"country": "Brazil",
 		"region": "Lanarkshire"
+	},
+  {
+		"name": "Charlotte Hull",
+		"phone": "757-3427",
+		"email": "aliquam.tincidunt@google.com",
+		"country": "United Kingdom",
+		"region": "Munster"
+	},
+	{
+		"name": "Kareem Trevino",
+		"phone": "280-5828",
+		"email": "orci.adipiscing@outlook.ca",
+		"country": "United Kingdom",
+		"region": "Borno"
+	},
+	{
+		"name": "Gage Franks",
+		"phone": "1-485-143-7068",
+		"email": "feugiat.tellus.lorem@icloud.couk",
+		"country": "Spain",
+		"region": "Kaliningrad Oblast"
+	},
+	{
+		"name": "Laura Ford",
+		"phone": "1-410-885-4159",
+		"email": "lobortis@outlook.couk",
+		"country": "Costa Rica",
+		"region": "Comunitat Valenciana"
+	},
+	{
+		"name": "Hannah Blankenship",
+		"phone": "279-7287",
+		"email": "rutrum@protonmail.couk",
+		"country": "Peru",
+		"region": "Hessen"
 	}
 ];
 
