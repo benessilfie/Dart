@@ -173,6 +173,11 @@ class HomePage extends StatelessWidget {
           itemBuilder: (context, Map<String, String> element) => Column(
         children: [
            ListTile(
+             
+             onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context){
+              return const ContactDetailsPage();}));},
+
                    leading: const CircleAvatar(
                    radius: 22,
                    backgroundImage: AssetImage('assets/adom.jpg'),),
@@ -201,9 +206,7 @@ class HomePage extends StatelessWidget {
 
       floatingActionButton: FloatingActionButton(
         onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context){
-            return const ContactDetailsPage();
-          }));
+
         },
         child: const Icon(Icons.add)),
     );

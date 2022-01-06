@@ -1,8 +1,11 @@
+import 'package:contact_app/contactmodel.dart';
 import 'package:flutter/material.dart';
 
 
 class ContactDetailsPage extends StatelessWidget {
-  const ContactDetailsPage({Key? key}) : super(key: key);
+  const ContactDetailsPage({Key? key, required this.contact}) : super(key: key);
+
+  final Contact contact;
 
   @override
   Widget build(BuildContext context) {
@@ -118,7 +121,7 @@ class ContactDetailsPage extends StatelessWidget {
          Container(
           color: const Color(0xff9AADBE),
           child: Column(children: const [
-            
+
             ListTile(
               title: Text('Share Contact', style: TextStyle(fontSize: 18),),),
           
