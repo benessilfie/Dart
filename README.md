@@ -13,7 +13,7 @@ A contact app built with [Flutter](https://flutter.dev)
 
 ## Art
 
-<img src="https://raw.githubusercontent.com/RegNex/Familicious-App/main/screenshots/Familicious.webp" width="100%"  height="50%"/>
+<img src="https://raw.githubusercontent.com/essilfiequansah/Week2assigment-ContactApp/master/screenshots/main.png" width="100%"  height="50%"/>
 
 <br>
 
