@@ -45,18 +45,59 @@ class ContactDetailsPage extends StatelessWidget {
             color: const Color(0xff9AADBE),
             child: Column(
               children: [
+
                 ListTile (
                   title: const Text('Mobile',style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600,),),
                   subtitle: const Text('+233 25 256 8547', 
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.normal, color: Color(0xff333333)),),
+
                   trailing: Row(
                     mainAxisSize: MainAxisSize.min,
+
                     children: [
-                      TextButton(onPressed: (){}, child: const Icon(Icons.message, color: Colors.black,),),
-                      const IconButton(onPressed: null, icon: Icon(Icons.call),),
+                      TextButton(onPressed: (){}, child: const Icon(Icons.message, color: Colors.black,),
+                      style: TextButton.styleFrom(backgroundColor: Colors.white,
+                      shape: const CircleBorder())),
+                      
+                      TextButton(onPressed: (){}, child: const Icon(Icons.call, color: Colors.black,),
+                      style: TextButton.styleFrom(backgroundColor: Colors.white,
+                      shape: const CircleBorder())),
                     ],
                   ),
                 ),
+
+                ListTile (
+                  title: const Text('Email', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600,),),
+                  subtitle: const Text('abenadela@gmail.com', 
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.normal, color: Color(0xff333333)),),
+
+                  trailing: Row(
+                    mainAxisSize: MainAxisSize.min,
+
+                    children: [
+                      TextButton(onPressed: (){}, child: const Icon(Icons.email, color: Colors.black,),
+                      style: TextButton.styleFrom(backgroundColor: Colors.white,
+                      shape: const CircleBorder())),
+                    ],
+                  ),
+                ),
+
+                ListTile (
+                  title: const Text('Email', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600,),),
+                  subtitle: const Text('abenadela@gmail.com', 
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.normal, color: Color(0xff333333)),),
+
+                  trailing: Row(
+                    mainAxisSize: MainAxisSize.min,
+
+                    children: [
+                      TextButton(onPressed: (){}, child: const Icon(Icons.email, color: Colors.black,),
+                      style: TextButton.styleFrom(backgroundColor: Colors.white,
+                      shape: const CircleBorder())),
+                    ],
+                  ),
+                ),
+
               ],
             ),
           ),
