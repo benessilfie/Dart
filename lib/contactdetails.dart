@@ -106,10 +106,27 @@ class ContactDetailsPage extends StatelessWidget {
               ListTile(
                 title: const Text('WhatsApp', style: TextStyle(fontSize: 18),),
                 trailing: Image.asset('assets/whatsapp.png'),),
-
             ],)
-          )
+          ),
 
+        const Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text('More Options', 
+            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),),
+          ),
+
+         Container(
+          color: const Color(0xff9AADBE),
+          child: Column(children: const [
+            
+            ListTile(
+              title: Text('Share Contact', style: TextStyle(fontSize: 18),),),
+          
+            ListTile(
+              title: Text('QR COde', style: TextStyle(fontSize: 18),),),
+          
+          ],)
+        ) 
         ],
       ),
     );
