@@ -36,12 +36,13 @@ class ContactDetailsPage extends StatelessWidget {
           ),
 
          const SizedBox(height: 25,),
-         const Center(
-            child: Text('Full name',
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600,),),
+         Center(
+            child: Text(contact.name,
+            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w600,),),
           ),
 
-        const  Center(child: Text('Location', style: TextStyle(fontSize: 18, fontWeight: FontWeight.normal,),)),
+        Center(child: Text('${contact.region}, ${contact.country}', 
+        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.normal,),)),
         const  SizedBox(height: 30,),
 
           Container(
@@ -51,8 +52,8 @@ class ContactDetailsPage extends StatelessWidget {
 
                 ListTile (
                   title: const Text('Mobile',style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600,),),
-                  subtitle: const Text('+233 25 256 8547', 
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.normal, color: Color(0xff333333)),),
+                  subtitle: Text(contact.phone, 
+                  style: const  TextStyle(fontSize: 16, fontWeight: FontWeight.normal, color: Color(0xff333333)),),
 
                   trailing: Row(
                     mainAxisSize: MainAxisSize.min,
@@ -71,8 +72,8 @@ class ContactDetailsPage extends StatelessWidget {
 
                 ListTile (
                   title: const Text('Email', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600,),),
-                  subtitle: const Text('abenadela@gmail.com', 
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.normal, color: Color(0xff333333)),),
+                  subtitle: Text(contact.email, 
+                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.normal, color: Color(0xff333333)),),
 
                   trailing: Row(
                     mainAxisSize: MainAxisSize.min,

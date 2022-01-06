@@ -1,4 +1,5 @@
 import 'package:contact_app/contactdetails.dart';
+import 'package:contact_app/contactmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:grouped_list/grouped_list.dart';
 
@@ -131,13 +132,24 @@ class HomePage extends StatelessWidget {
             shrinkWrap: true,
             itemBuilder: (context, index){
       
-              return const ListTile(
-               leading: CircleAvatar(
-                 radius: 22,
-                 backgroundImage: AssetImage('assets/adom.jpg'),),
-               title: Text('Micheal Nyarko', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
-               subtitle: Text('+233 56 342 8965'),
-               trailing: IconButton(onPressed: null, icon: Icon(Icons.more_horiz)),
+              return ListTile(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return ContactDetailsPage(contact: Contact(
+                      name: 'Michael Nayrko', 
+                      phone: '+233 56 231 5732', 
+                      email: 'michaelyarn@gmail.com', 
+                      country: 'Ghana', 
+                      region: 'Central Region'));
+                  }));
+                },
+
+               leading:const CircleAvatar(
+               radius: 22,
+               backgroundImage: AssetImage('assets/adom.jpg'),),
+               title:const Text('Micheal Nyarko', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
+               subtitle:const Text('+233 56 342 8965'),
+               trailing:const IconButton(onPressed: null, icon: Icon(Icons.more_horiz)),
              );
           }, 
       
@@ -170,13 +182,16 @@ class HomePage extends StatelessWidget {
         ),
           ),
           
-          itemBuilder: (context, Map<String, String> element) => Column(
-        children: [
-           ListTile(
-             
-             onTap: (){
+          itemBuilder: (context, Map<String, String> element) {
+            Contact contact = Contact.fromJson(element);
+            return Column(
+
+           children: [
+              ListTile(
+              onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: (context){
-              return const ContactDetailsPage();}));},
+              return ContactDetailsPage(contact: contact,);
+              },),);},
 
                    leading: const CircleAvatar(
                    radius: 22,
@@ -191,7 +206,8 @@ class HomePage extends StatelessWidget {
                thickness: 1,
             )
         ],
-          ),
+          );
+          },
       
           itemComparator: (item1, item2) => 
           item1['name']!.compareTo(item2['name']!), // optional
