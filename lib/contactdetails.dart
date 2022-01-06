@@ -82,25 +82,31 @@ class ContactDetailsPage extends StatelessWidget {
                   ),
                 ),
 
-                ListTile (
-                  title: const Text('Email', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600,),),
-                  subtitle: const Text('abenadela@gmail.com', 
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.normal, color: Color(0xff333333)),),
-
-                  trailing: Row(
-                    mainAxisSize: MainAxisSize.min,
-
-                    children: [
-                      TextButton(onPressed: (){}, child: const Icon(Icons.email, color: Colors.black,),
-                      style: TextButton.styleFrom(backgroundColor: Colors.white,
-                      shape: const CircleBorder())),
-                    ],
-                  ),
-                ),
-
+              const ListTile (
+                  title:  Text('Group', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600,),),
+                  subtitle:  Text('Family', 
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.normal, color: Color(0xff333333)),),),
               ],
             ),
           ),
+
+        const Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text('Account Linked', 
+            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),),
+          ),
+
+          Container(
+            color: const Color(0xff9AADBE),
+            child: Column(children: [
+              ListTile(
+                title: Text('Telegram', style: TextStyle(fontSize: 18),
+                trailing: ,
+                )
+              )
+            ],)
+          )
+
         ],
       ),
     );
