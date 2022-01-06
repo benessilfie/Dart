@@ -18,8 +18,8 @@ A contact app built with [Flutter](https://flutter.dev)
 <br>
 
 <tr>
-    <td><img align="left" src="https://raw.githubusercontent.com/essilfiequansah/Week2assigment-ContactApp/master/screenshots/Homepage.png" width="200" height="420"/></td>
-    <td><img src="https://raw.githubusercontent.com/essilfiequansah/Week2assigment-ContactApp/master/screenshots/Contact%20Details%20Page.png" width="200" height="420"/></td> 
+    <td><img align="left" src="https://raw.githubusercontent.com/essilfiequansah/Week2assigment-ContactApp/master/screenshots/Homepage.png" width="200" height="410"/></td>
+    <td><img src="https://raw.githubusercontent.com/essilfiequansah/Week2assigment-ContactApp/master/screenshots/Contact%20Details%20Page.png" width="200" height="410"/></td> 
 </tr>
 
 ## Getting Started
