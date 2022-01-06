@@ -1,38 +1,25 @@
-# My Contact App
+# Week2 Assignment - Contact App
 
 A contact app built with [Flutter](https://flutter.dev)
 
 <p align="center">
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/RegNex/Familicious/graphs/commit-activity)
-
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/RegNex/)
-
 [![ForTheBadge made-with-flutter](https://img.shields.io/badge/flutter-made%20with%20flutter-blue.svg)](https://flutter.dev)
 [![ForTheBadge ios-supported](https://img.shields.io/badge/IOS-IOS%20Supported-lightgrey.svg)](https://flutter.dev)
 [![ForTheBadge ios-android](https://img.shields.io/badge/android-android%20supported-green.svg)](https://flutter.dev)
 
 </p>
 
-This project is an implementation of a Design i found on [dribble.com](https://dribbble.com/shots/15800627-Famlicious-us-more-together-Social-app) by [Ivan Saverchenko](https://dribbble.com/saverchenko).
-
 ## Art
 
-<img src="https://raw.githubusercontent.com/essilfiequansah/Week2assigment-ContactApp/main/screenshots/Homepage.png" width="100%"  height="50%"/>
+<img src="https://raw.githubusercontent.com/RegNex/Familicious-App/main/screenshots/Familicious.webp" width="100%"  height="50%"/>
 
 <br>
-   
+
 <tr>
-    <td><img align="left" src="https://raw.githubusercontent.com/RegNex/Familicious-App/main/screenshots/screenshot_1.png" width="200" height="400"/></td>
-    <td><img src="https://raw.githubusercontent.com/RegNex/Familicious-App/main/screenshots/screenshot_2.png" width="200" height="400"/></td> 
-</tr>
-<tr>
-    <td><img align="left" src="https://raw.githubusercontent.com/RegNex/Familicious-App/main/screenshots/screenshot_3.png" width="200" height="400"/></td>
-    <td><img src="https://raw.githubusercontent.com/RegNex/Familicious-App/main/screenshots/screenshot_4.png" width="200" height="400"/></td> 
-</tr>
-<tr>
-    <td><img align="left" src="https://raw.githubusercontent.com/RegNex/Familicious-App/main/screenshots/screenshot_5.png" width="200" height="400"/></td>
-    <td><img src="https://raw.githubusercontent.com/RegNex/Familicious-App/main/screenshots/screenshot_6.png" width="200" height="400"/></td> 
+    <td><img align="left" src="https://raw.githubusercontent.com/essilfiequansah/Week2assigment-ContactApp/master/screenshots/Homepage.png" width="200" height="400"/></td>
+    <td><img src="https://raw.githubusercontent.com/essilfiequansah/Week2assigment-ContactApp/master/screenshots/Contact%20Details%20Page.png" width="200" height="400"/></td> 
 </tr>
 
 ## Getting Started
@@ -70,11 +57,6 @@ C:\path\to\project> flutter run
 ```
 run: flutter build <OS PLATFORM> e.g flutter build ios --release
 ```
-
-
-## Switch Theme
-
-**Automatically switch theme based on system settings**
 
 ## Resources
 
@@ -114,22 +96,17 @@ What things you need to run the app
 
 ## Author 😊
 
-**Etornam Sunu Bright**
+**Benjamin Ofori-Quansah**
 
-- [**Twitter**](https://bit.ly/3ivb9GC)
-- [**Linkedin**](https://bit.ly/3iyxOl8)
+- [**Twitter**](https://twitter.com/essilfiequansah)
+- [**Linkedin**](https://www.linkedin.com/in/essilfiequansah/)
 
-## Inspiration
-
-**Ivan Saverchenko**
-
-- [Ivan Saverchenko](https://dribbble.com/saverchenko)
 
 ## License
 
 MIT License
 
-Copyright (c) 2021 Etornam Sunu
+Copyright (c) 2021 Benjamin Ofori-Quansah
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
