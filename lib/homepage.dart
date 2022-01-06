@@ -197,6 +197,8 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
+
+      floatingActionButton: const FloatingActionButton(onPressed: null, child: Icon(Icons.add)),
     );
   }
 }
