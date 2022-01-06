@@ -1,3 +1,4 @@
+import 'package:contact_app/contactdetails.dart';
 import 'package:flutter/material.dart';
 import 'package:grouped_list/grouped_list.dart';
 
@@ -198,7 +199,13 @@ class HomePage extends StatelessWidget {
         ),
       ),
 
-      floatingActionButton: const FloatingActionButton(onPressed: null, child: Icon(Icons.add)),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context){
+            return const ContactDetailsPage();
+          }));
+        },
+        child: const Icon(Icons.add)),
     );
   }
 }
