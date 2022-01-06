@@ -115,76 +115,87 @@ class HomePage extends StatelessWidget {
         ),),
       ),
 
-      body: ListView(
-        controller: _scrollController,
-        // padding: const EdgeInsets.all(15),
-        children: [
-           const Text('Recents', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, ),),
-        
-        ListView.separated(
+      body: SafeArea(
+        child: ListView(
           controller: _scrollController,
-          shrinkWrap: true,
-          itemBuilder: (context, index){
-
-            return const ListTile(
-             leading: CircleAvatar(
-               radius: 22,
-               backgroundImage: AssetImage('assets/adom.jpg'),),
-             title: Text('Micheal Nyarko', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
-             subtitle: Text('+233 56 342 8965'),
-             trailing: IconButton(onPressed: null, icon: Icon(Icons.more_horiz)),
-           );
-        }, 
-
-          separatorBuilder: (context, index){
-            return const Divider(
-             indent: 25,
-             thickness: 1,
-          );},
-          itemCount: 3),
-
-         const Text('Contacts', 
-         style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.black,),),
-         
-         GroupedListView<dynamic, String>(
-           shrinkWrap: true,
-
-    elements: data,
-
-    groupBy: (element) => element['name'].toString().substring(0,1),
-    groupSeparatorBuilder: (String groupByValue) => 
-    SizedBox(
-      width: MediaQuery.of(context).size.width,
-      child: Text(groupByValue.substring(0,1), textAlign: TextAlign.right, 
-      style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 18),),
-    ),
-    
-    itemBuilder: (context, dynamic element) => Column(
-      children: const [
-         ListTile(
-                 leading: CircleAvatar(
+          // padding: const EdgeInsets.all(15),
+          children: [
+             const Padding(
+               padding: EdgeInsets.symmetric(horizontal: 16),
+               child: Text('Recents', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, ),),
+             ),
+          
+          ListView.separated(
+            controller: _scrollController,
+            shrinkWrap: true,
+            itemBuilder: (context, index){
+      
+              return const ListTile(
+               leading: CircleAvatar(
                  radius: 22,
                  backgroundImage: AssetImage('assets/adom.jpg'),),
-                 title: Text('Micheal Nyarko', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
-                 subtitle: Text('+233 56 342 8965'),
-                 trailing: IconButton(onPressed: null, icon: Icon(Icons.more_horiz)),
-               ),
-
-               Divider(
-             indent: 25,
-             thickness: 1,
-          )
-      ],
-    ),
-
-    itemComparator: (item1, item2) => 
-    item1['name'].compareTo(item2['name']), // optional
-
-    useStickyGroupSeparators: true, // optional
-    floatingHeader: true, // optional
-    order: GroupedListOrder.ASC, // optional
-  ),
+               title: Text('Micheal Nyarko', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
+               subtitle: Text('+233 56 342 8965'),
+               trailing: IconButton(onPressed: null, icon: Icon(Icons.more_horiz)),
+             );
+          }, 
+      
+            separatorBuilder: (context, index){
+              return const Divider(
+               indent: 25,
+               thickness: 1,
+            );},
+            itemCount: 3),
+      
+          const Padding(
+             padding: EdgeInsets.symmetric(horizontal: 16),
+             child: Text('Contacts', 
+             style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.black,),),
+           ),
+           
+           GroupedListView<Map<String, String>, String>(
+             shrinkWrap: true,
+      
+          elements: data,
+      
+          groupBy: (element) => element['name'].toString().substring(0,1),
+          groupSeparatorBuilder: (String groupByValue) => 
+          SizedBox(
+        width: MediaQuery.of(context).size.width,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Text(groupByValue.substring(0,1), textAlign: TextAlign.right, 
+          style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 18),),
+        ),
+          ),
+          
+          itemBuilder: (context, Map<String, String> element) => Column(
+        children: [
+           ListTile(
+                   leading: const CircleAvatar(
+                   radius: 22,
+                   backgroundImage: AssetImage('assets/adom.jpg'),),
+                   title: Text('${element['name']}', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
+                   subtitle: Text('${element['phone']}'),
+                   trailing: const IconButton(onPressed: null, icon: Icon(Icons.more_horiz)),
+                 ),
+      
+                const Divider(
+               indent: 25,
+               thickness: 1,
+            )
         ],
+          ),
+      
+          itemComparator: (item1, item2) => 
+          item1['name']!.compareTo(item2['name']!), // optional
+      
+          useStickyGroupSeparators: true, // optional
+          floatingHeader: true, // optional
+          order: GroupedListOrder.ASC, // optional
+        ),
+          ],
+        ),
       ),
     );
   }
