@@ -100,10 +100,13 @@ class ContactDetailsPage extends StatelessWidget {
             color: const Color(0xff9AADBE),
             child: Column(children: [
               ListTile(
-                title: Text('Telegram', style: TextStyle(fontSize: 18),
-                trailing: ,
-                )
-              )
+                title: const Text('Telegram', style: TextStyle(fontSize: 18),),
+                trailing: Image.asset('assets/telegram.png'),),
+              
+              ListTile(
+                title: const Text('WhatsApp', style: TextStyle(fontSize: 18),),
+                trailing: Image.asset('assets/whatsapp.png'),),
+
             ],)
           )
 
