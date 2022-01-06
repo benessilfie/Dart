@@ -46,7 +46,7 @@ class ContactDetailsPage extends StatelessWidget {
         const  SizedBox(height: 30,),
 
           Container(
-            color: const Color(0xff9AADBE),
+            color: const Color(0xffebf3e6),
             child: Column(
               children: [
 
@@ -101,7 +101,7 @@ class ContactDetailsPage extends StatelessWidget {
           ),
 
           Container(
-            color: const Color(0xff9AADBE),
+            color: const Color(0xffebf3e6),
             child: Column(children: [
               ListTile(
                 title: const Text('Telegram', style: TextStyle(fontSize: 18),),
@@ -120,7 +120,7 @@ class ContactDetailsPage extends StatelessWidget {
           ),
 
          Container(
-          color: const Color(0xff9AADBE),
+          color: const Color(0xffebf3e6),
           child: Column(children: const [
 
             ListTile(

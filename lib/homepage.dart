@@ -221,9 +221,8 @@ class HomePage extends StatelessWidget {
       ),
 
       floatingActionButton: FloatingActionButton(
-        onPressed: (){
-
-        },
+        backgroundColor: const Color(0xff9dc284),
+        onPressed: (){},
         child: const Icon(Icons.add)),
     );
   }
